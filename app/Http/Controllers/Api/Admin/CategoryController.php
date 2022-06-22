@@ -76,7 +76,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        $category = Category::whereId($id)->first();
+        $category = Category::whereId($id)->with('subCategory')->first();
         
         if($category) {
             //return success with Api Resource

@@ -26,8 +26,18 @@ class Product extends Model
      */
     public function category()
     {
-        return $this->belongsTo(Category::class, 'subcategory');
+        return $this->belongsTo(Category::class, 'category_id');
     }
+
+    // /**
+    //  * category
+    //  *
+    //  * @return void
+    //  */
+    // public function parentCategory()
+    // {
+    //     return $this->belongsTo(Category::class, 'parent_id');
+    // }
 
     /**
      * reviews
